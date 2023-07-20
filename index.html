@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <title>Let's BLOG</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="nav container">
+      <a href="#" class="logo">Let's <span>BLOG</span></a>
+      <!-- <a href="#" class="login">Sign Up</a> -->
+      <button onclick="document.getElementById('id01').style.display='block'" class="login" style="width:auto;">Sign
+        Up</button>
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php" method="post">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-text container">
+      <h2 class="home-title">Learn, read or write.</h2>
+      <span class="home-subtitle">All time favorite.</span>
+    </div>
+  </section>
+
+  <section class="about container" id="about">
+    <div class="contentBx">
+      <h2 class="titleText">WANNA GO FOR TRENDINGS?</h2>
+      <p class="title-text">
+        Unlock a World of Knowledge and Exploration Through Our Engaging Blog.
+        Dive into a Captivating Journey of Ideas and Perspectives.
+        Fuel Your Curiosity and Expand Your Horizons with Our Compelling Blog.
+        Embark on a Mind-Expanding Adventure through the Power of Words.
+        Discover a Treasure Trove of Information and Inspiration in Every Blog Post.
+        Ignite Your Imagination and Enrich Your Mind with Our Thought-Provoking Blog<span id="dots">...</span>
+        <span id="more">
+          Immerse Yourself in Riveting Stories and Thoughtful Discussions
+          Unleash Your Inner Explorer with Our Fascinating Blog Content
+          Join a Community of Inquisitive Minds and Uncover the Secrets of the World
+          Indulge in the Joy of Learning as You Explore Our Insightful Blog
+          Enlighten Your Senses and Feed Your Intellectual Appetite with Our Blog
+          Be Inspired, Be Informed, Be Intrigued – Welcome to our Extraordinary Blog..
+        </span>
+      </p>
+
+      <button onclick="myFunction()" class="btn2" id="myBtn">Read more</button>
+    </div>
+    <div class="imgBx">
+      <img src="https://source.unsplash.com/1600x900/?solid" alt="" class="fitBg">
+    </div>
+  </section>
+
+  <div class="post-filter container">
+    <span class="filter-item active-filter" data-filter="all">All</span>
+    <span class="filter-item" data-filter="tech">Technology</span>
+    <span class="filter-item" data-filter="news">News</span>
+    <span class="filter-item" data-filter="food">Had meal?</span>
+
+  </div>
+
+  <div class="post container">
+    <!-- Post 1 -->
+    <div class="post-box tech">
+      <img src="https://source.unsplash.com/1600x900/?blog" alt="" class="post-img">
+      <h2 class="category">Tech</h2>
+      <a href="#" class="post-title">How to create the best blog with wordpress</a>
+      <span class="post-date">11 Jan 2023</span>
+      <p class="post-description">More bloggers and independent creators choose WordPress than any other blogging tool.
+        Tap into intuitive, flexible tools that put writers, bloggers, and creators first</p>
+      <div class="profile">
+        <img src="https://source.unsplash.com/1600x900/?blog" alt="" class="profile-img">
+        <span class="profile-name">wordpress</span>
+        <button onclick="openWin1()" class="btn">Want to read more?</button>
+      </div>
+    </div>
+    <!-- Post 2 -->
+    <div class="post-box tech">
+      <img src="https://source.unsplash.com/1600x900/?computer" alt="" class="post-img">
+      <h2 class="category">Tech</h2>
+      <a href="#" class="post-title">The Best Way to Learn Frontend Web Development</a>
+      <span class="post-date">12 Jan 2023</span>
+      <p class="post-description">Web development is a field that is not going anywhere anytime soon. The web is moving
+        quickly, and there are regular improvements to the devices many people use daily..</p>
+      <div class="profile">
+        <img src="https://source.unsplash.com/1600x900/?computer" alt="" class="profile-img">
+        <span class="profile-name">freecode</span>
+        <button onclick="openWin2()" class="btn">Want to read more?</button>
+      </div>
+    </div>
+    <!-- Post 3 -->
+    <div class="post-box food">
+      <img src="https://source.unsplash.com/1600x900/?food" alt="" class="post-img">
+      <h2 class="category">Food</h2>
+      <a href="#" class="post-title">10 monsoon perfect recipes</a>
+      <span class="post-date">12 Apr 2023</span>
+      <p class="post-description">Monsoons in India always have their own story to narrate. The pitter-patter of the
+        raindrops in tune with the sound of your favourite song, the chilly breeze and a cup of piping hot chai. Lorem
+        ipsum dolor, sit amet consectetur adipisicing elit. Minima exercitationem eaque neque dolore in alias.</p>
+      <div class="profile">
+        <img src="https://source.unsplash.com/1600x900/?food" alt="" class="profile-img">
+        <span class="profile-name">Sanjeev Kapoor</span>
+        <button onclick="openWin3()" class="btn">Want to read more?</button>
+      </div>
+    </div>
+    <!-- Post 4 -->
+    <div class="post-box news">
+      <img src="https://source.unsplash.com/1600x900/?news" alt="" class="post-img">
+      <h2 class="category">NEWS</h2>
+      <a href="#" class="post-title">Get Latest News with TIMES NOW</a>
+      <span class="post-date">12 Apr 2023</span>
+      <p class="post-description">Get updated with latest news and everytrhing happening around the surrounding.</p>
+      <div class="profile">
+        <img src="https://source.unsplash.com/1600x900/?news" alt="" class="profile-img">
+        <span class="profile-name">TIMES NOW</span>
+        <button onclick="openWin4()" class="btn">Want to read more?</button>
+      </div>
+    </div>
+    <!-- Post 5 -->
+    <div class="post-box tech">
+      <img src="https://source.unsplash.com/1600x900/?laptop" alt="" class="post-img">
+      <h2 class="category">Tech</h2>
+      <a href="#" class="post-title">Best Laptop 2023: The 11 Laptops We Recommend</a>
+      <span class="post-date">12 Apr 2023</span>
+      <p class="post-description">From Mac to HP, we've reviewed the best laptops on the market. Through our rigorous
+        testing process, we've identified a list of the best laptops for any need</p>
+      <div class="profile">
+        <img src="https://source.unsplash.com/1600x900/?laptop" alt="" class="profile-img">
+        <span class="profile-name">CNET</span>
+        <button onclick="openWin5()" class="btn">Want to read more?</button>
+      </div>
+    </div>
+    <!-- Post 6 -->
+    <div class="post-box news">
+      <img src="https://source.unsplash.com/1600x900/?newspaper" alt="" class="post-img">
+      <h2 class="category">News</h2>
+      <a href="#" class="post-title">Let us explore world with Hindustan Times..</a>
+      <span class="post-date">22 Feb 2023</span>
+      <p class="post-description">Read Most Popular News Articles, Trending News, Top News Stories headlines from India,
+        World, Cricket, Entertainment, Sports and more at Hindustan Times.</p>
+      <div class="profile">
+        <img src="https://source.unsplash.com/1600x900/?newspaper" alt="" class="profile-img">
+        <span class="profile-name">Hindustan Times</span>
+        <button onclick="openWin6()" class="btn">Want to read more?</button>
+      </div>
+    </div>
+    <!-- Post 7 -->
+    <div class="post-box tech">
+      <img src="https://source.unsplash.com/1600x900/?robots" alt="" class="post-img">
+      <h2 class="category">Tech</h2>
+      <a href="#" class="post-title">How technology is evolving?</a>
+      <span class="post-date">23 Apr 2023</span>
+      <p class="post-description">Just over 20 years ago, the dotcom bubble burst, causing the stocks of many tech firms
+        to tumble. Some companies, like Amazon, quickly reco</p>
+      <div class="profile">
+        <img src="https://source.unsplash.com/1600x900/?robots" alt="" class="profile-img">
+        <span class="profile-name">Artificial Intelligence</span>
+        <button onclick="openWin7()" class="btn">Want to read more?</button>
+      </div>
+    </div>
+    <!-- Post 1 -->
+    <div class="post-box news">
+      <img src="https://source.unsplash.com/1600x900/?universe" alt="" class="post-img">
+      <h2 class="category">News</h2>
+      <a href="#" class="post-title">Hindi News: Want to know?</a>
+      <span class="post-date">27 June 2023</span>
+      <p class="post-description">In 1978, it was the time when the national capital witnessed such a severe flood after
+        100 years. The situation was such that the city was i</p>
+      <div class="profile">
+        <img src="https://source.unsplash.com/1600x900/?universe" alt="" class="profile-img">
+        <span class="profile-name">AAJ TAK</span>
+        <button onclick="openWin8()" class="btn">Want to read more?</button>
+      </div>
+    </div>
+    <!-- Post 9 -->
+    <div class="post-box food">
+      <img src="https://source.unsplash.com/1600x900/?Dosa" alt="" class="post-img">
+      <h2 class="category">Food</h2>
+      <a href="#" class="post-title">South Indian Recipes</a>
+      <span class="post-date">15 Jun 2023</span>
+      <p class="post-description">South Indian cuisine is one of the most popular native cuisines of India. It is
+        primarily a combination of the food of the five states of Andhra Prades</p>
+      <div class="profile">
+        <img src="https://source.unsplash.com/1600x900/?dosa" alt="" class="profile-img">
+        <span class="profile-name">South bites</span>
+        <button onclick="openWin9()" class="btn">Want to read more?</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="sec aboutus">
+        <h2>About Us</h2>
+        <p>
+        </p>
+        <ul class="sci">
+          <li><a href="https://www.facebook.com/" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/atomicneutron/" target="_blank"><i class="bx bxl-instagram"></i></a>
+          </li>
+          <li><a href="https://twitter.com/home?lang=en-in" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/roshni-dubey-2a6b33228/" target="_blank"><i
+                class="bx bxl-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="sec quicklinks">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+      <div class="sec contactBx">
+        <h2>Contact Info</h2>
+        <ul class="info">
+          <li>
+            <span><i class='bx bxs-map'></i></span>
+            <span>1101 Roshni Dubey <br> A resident. <br> India</span>
+          </li>
+          <li>
+            <span><i class='bx bx-envelope'></i></span>
+            <p><a href="mailto:roshnie1101@gmail.com.">E-Mail me.</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
